@@ -1,0 +1,235 @@
+font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica Neue Regular.otf') format('otf'),
+         url('Helvetica Neue Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family:'Helvetica';
+    margin: 0;
+    padding: 0;
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+body.home {
+    background-image: url('/Users/agastya/Desktop/Puzzl Site/Graphics/pattern.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+header {
+    background-color: #12111100;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+.h2-config {
+    font-size: 2.5em;
+    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+}
+
+#bottom-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto; 
+    z-index: -1;
+}
+
+.divider {
+    border-top: 1px solid #ccc; 
+    position: absolute;
+    width: 100%;
+    top: 73px; /* Adjusted for demo purposes; adjust as needed */
+    z-index: 2;
+    background-color: #fff;
+    margin-top: -1px; /* Adjusted to remove gap between divider and blurred content */
+}
+
+
+
+.logo h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li {
+    position: relative; /* Added relative positioning */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative; /* Added relative positioning */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px; /* Adjusted padding for larger highlight */
+    border-radius: 5px; /* Added border radius for rounded corners */
+}
+
+nav ul li a:hover::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+    z-index: -1; /* Place behind the text */
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #0b0b0b00;
+    max-width: 120px; /* Adjusted width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 2%;
+    margin-top: 10px; /* Adjusted margin to position the dropdown below the Apps link */
+}
+
+.dropdown-content li {
+    text-align: center; /* Center the text */
+    padding: 2px 10px; /* Adjusted padding for centering */
+    line-height: 1; /* Adjusted line height */
+}
+
+.dropdown-content li a {
+    color: #fff;
+    padding: 2px 10px; /* Adjusted padding */
+    text-decoration: none;
+    display: block;
+    text-align: center; /* Center the text */
+    line-height: 1.5; /* Adjusted line height for centering */
+    position: relative; /* Added relative positioning */
+}
+
+.button-config {
+    border: none;
+    padding: 0;
+    background: none;
+    font-size: inherit;
+    width: 500px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+}
+
+.keypad-body {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.keypad {
+    text-align: center;
+}
+
+input {
+    font-size: 20px;
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
+.as button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #121111;
+    color: #fff;
+    border: none;
+}
+
+.as button:hover {
+    background-color: #333;
+}
+
+
+.dropdown-content li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Invisible overlay */
+}
+
+.dropdown-content li a:hover::before {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+}
+
+.counter-config {
+    font-size: 2em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-content {
+    text-align: center;
+    padding: 40px 40px 60px
+}
+
+.text-config {
+    font-size: 1.5em;
+    padding: 165px;
+}
+
+.h2-config{
+    font-size: 3em;
+}
+
+.subsets {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.category {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
