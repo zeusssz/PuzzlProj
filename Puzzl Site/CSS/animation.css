@@ -1,0 +1,27 @@
+body.home header,
+body.home .main-content {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+body.home header {
+    animation: slideDown 0.5s 5s forwards;
+}
+
+body.home .main-content {
+    animation: slideUp 0.5s 5s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

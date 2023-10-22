@@ -1,0 +1,195 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('./img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 100%;
+  /*background: rgb(0, 0, 0);
+  background: linear-gradient(120deg, rgb(14, 14, 14) 32%, rgba(70,0,106,1) 100%);*/
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.196);
+  box-shadow: 0 8px 32px 0 rgba(111, 31, 137, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 80%;
+  max-width: 400px;
+  height: 300px;
+  margin: 1em;
+  overflow: hidden;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: rgba( 255, 255, 255, 0.25 );
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: rgba( 0, 0, 0, 0.30 );
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.js-tilt-glare {
+  border-radius: 10px;
+}
+
+a {
+  margin-top: 7%;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 3em;
+  color: #fff;
+  margin: 0;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li {
+  position: relative; /* Added relative positioning */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative; /* Added relative positioning */
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px; /* Adjusted padding for larger highlight */
+  border-radius: 5px; /* Added border radius for rounded corners */
+}
+
+nav ul li a:hover::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+  z-index: -1; /* Place behind the text */
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #0b0b0b00;
+  max-width: 120px; /* Adjusted width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 2%;
+  margin-top: 10px; /* Adjusted margin to position the dropdown below the Apps link */
+}
+
+.dropdown-content li {
+  text-align: center; /* Center the text */
+  padding: 2px 10px; /* Adjusted padding for centering */
+  line-height: 1; /* Adjusted line height */
+}
+
+.dropdown-content li a {
+  color: #fff;
+  padding: 2px 10px; /* Adjusted padding */
+  text-decoration: none;
+  display: block;
+  text-align: center; /* Center the text */
+  line-height: 1.5; /* Adjusted line height for centering */
+  position: relative; /* Added relative positioning */
+}
+
+.divider {
+  border-top: 1px solid #ccc; 
+  position: absolute;
+  width: 100%;
+  top: 73px; /* Adjusted for demo purposes; adjust as needed */
+  z-index: 2;
+  background-color: #fff;
+  margin-top: -1px; /* Adjusted to remove gap between divider and blurred content */
+}
