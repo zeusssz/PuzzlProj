@@ -2,8 +2,10 @@
 ## What is Puzzl?
 Puzzl is an application and website, aiming to make some everyday things easier, using AI. We currently have 3 features planned.
 >Weather
->| Mapping
->| Translation
+<br>
+>Mapping
+<br>
+>Translation
 
 Of these three, we have completed **Weather**. 
 The other 2 will be completed if this project gets users.
