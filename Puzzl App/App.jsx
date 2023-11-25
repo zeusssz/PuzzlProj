@@ -3,7 +3,7 @@ import {Text, StyleSheet, TouchableOpacity, SafeAreaView} from 'react-native';
 import Drawer from './Drawer';
 import Navbar from './Navbar'
 return  (
-   , HomeScreen = () => {
+    HomeScreen = () => {
       return (
         <View>
           <ImageBackground
