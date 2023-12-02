@@ -29,7 +29,7 @@ width: 32,
 height; 32
         ;
   }
-  logo: {
+logo: {
 position: 'absolute',
 top; 0,
 left; 0,
