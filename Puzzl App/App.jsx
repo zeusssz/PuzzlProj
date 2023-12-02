@@ -7,7 +7,6 @@ return  (
       return (
         <View>
           <ImageBackground source={require('./pattern.gif')} style={style.background1}>
-
             <ImageBackground source={require('./Box.png')} style={styles.background2}>
             </ImageBackground>
           </ImageBackground>
