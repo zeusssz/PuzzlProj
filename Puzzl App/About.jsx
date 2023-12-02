@@ -17,7 +17,7 @@ class AppPage extends React.Component {
                     source={{ uri: '' }}
                     style={styles.image}
                   />
-                  <Text style={styles.name}>Agaysta - Lead Developer</Text>
+                  <Text style={styles.name}>Agastya - Lead Developer</Text>
                 </View>
                 <View style={styles.developer}>
                   <Image
