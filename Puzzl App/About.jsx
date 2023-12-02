@@ -48,12 +48,12 @@ class AppPage extends React.Component {
         heading: {
           fontSize: 24,
           fontWeight: 'bold',
-          color: '#FFFFFF',
+          color: '#fff',
           marginBottom: 10,
         },
         text: {
           fontSize: 18,
-          color: '#000000',
+          color: '#fff',
           marginBottom: 10,
         },
         developers: {
