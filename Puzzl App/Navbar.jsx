@@ -31,7 +31,8 @@ height; 32
   }
   logo: {
 position: 'absolute',
-top, left; 0,
+top; 0,
+left; 0,
 width; 32,
 height; 32,
 resizeMode; 'contain',
