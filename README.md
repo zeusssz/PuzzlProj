@@ -17,7 +17,7 @@ Puzzl was a project worked on by-
 <br>
 **H9K12S2010**, who worked on the Android and iOS app. 
 <br>
-**blank**, who worked on UI.
+**AJ_T**, who worked on UI.
 
 ### If you find this useful, or promising, please consider donating :)
 
