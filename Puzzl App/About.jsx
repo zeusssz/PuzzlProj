@@ -31,7 +31,7 @@ class AppPage extends React.Component {
                     source={{ uri: '' }}
                     style={styles.image}
                   />
-                  <Text style={styles.name}>Anihita - UI/3d artist</Text>
+                  <Text style={styles.name}>Anahita - Art/Ui</Text>
                 </View>
               </View>
             </View>
