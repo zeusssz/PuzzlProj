@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View,StyleSheet, Image, TouchableOpacity, SafeAreaView, ImageBackground} from 'react-native';
-import puzzl from './puzzl'
+import Puzzl from './Puzzl.js'
     const weather = () => {
 
 
