@@ -1,42 +1,65 @@
-import React from 'react';
-import MyComponent from
-'./Drawer'
-import About from
-'./About'
-const Navbar = () => {
-    return (
-      <View style={styles.container}>
-        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-        <Image
-          style={styles.logo}
-          source={require('./img/logo.png')} />
-        <View style={styles.icon} />
-      </View>
-    );
- }
+import React, { useState } from "react";
+import { View, StyleSheet } from "react-native";
+import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
+import { useNavigation } from "@react-navigation/native";
+import Screen1 from './About';
+import Screen2 from './Screen2'; // Import other screens as needed
 
-const styles =  {
-container: {
-flexDirection: 'row',
-alignItems: 'center',
-justifyContent: 'space-between',
-backgroundColor: 'rgba(255, 255, 255, 0.3)',
-height: 60,
-paddingHorizontal: 20,
-}
-icon: {
-width: 32,
-height; 32
-        ;
-  }
-logo: {
-position: 'absolute',
-top; 0,
-left; 0,
-width; 32,
-height; 32,
-resizeMode; 'contain',
-        ;
-  }
+const DrawerContent = (props) => {
+  const navigation = useNavigation(); // Access navigation using useNavigation hook
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  return (
+    <View style={styles.container}>
+      <DrawerContentScrollView {...props}>
+        <View style={styles.drawerSection}>
+          <DrawerItem
+            label="About"
+            onPress={() => {
+              navigation.navigate('About'); // Navigate to 'About' screen
+            }}
+          />
+          <DrawerItem
+            label="Report"
+            onPress={() => {
+              // Navigate to 'Report' screen or specify the screen name accordingly
+            }}
+          />
+          <DrawerItem
+            label="Apps"
+            onPress={toggleDropdown}
+          />
+          {showDropdown && (
+            <View style={styles.dropdownSection}>
+              <DrawerItem
+                label="Sub-option 1"
+                onPress={() => {
+                  navigation.navigate('Screen2'); // Navigate to 'Screen2'
+                }}
+              />
+              {/* Add similar navigation logic for other sub-options cuz its your job dumbass */}
+            </View>
+          )}
+        </View>
+      </DrawerContentScrollView>
+    </View>
+  );
 };
-export default Navbar
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  drawerSection: {
+    marginTop: 15,
+  },
+  dropdownSection: {
+    marginLeft: 20,
+  },
+});
+
+export default DrawerContent;
