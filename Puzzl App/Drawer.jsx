@@ -1,22 +1,14 @@
-import React from 'react';
-
-
-import { Linking } from 'react-native'
-
-
-
-// This is the code for the drawer component
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
-import Screen1 from './About'
-
+import { useNavigation } from "@react-navigation/native";
+import Screen1 from './About';
+import Screen2 from './Screen2'; // Import other screens as needed
 
 const DrawerContent = (props) => {
-  // This is the state for the secondary dropdown list
+  const navigation = useNavigation(); // Access navigation using useNavigation hook
   const [showDropdown, setShowDropdown] = useState(false);
 
-  // This is the function to toggle the dropdown list
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -28,13 +20,13 @@ const DrawerContent = (props) => {
           <DrawerItem
             label="About"
             onPress={() => {
-              props.navigation.navigate(Screen1);
+              navigation.navigate('About'); // Navigate to 'About' screen
             }}
           />
           <DrawerItem
             label="Report"
             onPress={() => {
-              props.navigation.navigate();
+              // Navigate to 'Report' screen or specify the screen name accordingly
             }}
           />
           <DrawerItem
@@ -46,21 +38,10 @@ const DrawerContent = (props) => {
               <DrawerItem
                 label="Sub-option 1"
                 onPress={() => {
-                  props.navigation.navigate(Screen2);
+                  navigation.navigate('Screen2'); // Navigate to 'Screen2'
                 }}
               />
-              <DrawerItem
-                label="Sub-option 2"
-                onPress={() => {
-                  props.navigation.navigate("Screen4");
-                }}
-              />
-              <DrawerItem
-                label="Sub-option 3"
-                onPress={() => {
-                  props.navigation.navigate("Screen5");
-                }}
-              />
+              {/* Add similar navigation logic for other sub-options */}
             </View>
           )}
         </View>
@@ -82,4 +63,3 @@ const styles = StyleSheet.create({
 });
 
 export default DrawerContent;
-
